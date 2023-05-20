@@ -1,8 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { SimulatorForm, schema } from '../schema';
 
-export function useSimulatorForm() {
+//TYPES
+import { SimulatorForm, schema } from '../schema';
+import { FormProps } from '../types';
+
+export function useSimulatorForm({ onSubmit }: FormProps) {
   const options = [
     {
       label: 'Fibrocimento Madeira',
@@ -38,9 +41,9 @@ export function useSimulatorForm() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = handleSubmit((data) => {
-    console.log('data', data);
+  const onSubmitForm = handleSubmit((data) => {
+    onSubmit(data);
   });
 
-  return { options, control, onSubmit, errors };
+  return { options, control, onSubmitForm, errors };
 }

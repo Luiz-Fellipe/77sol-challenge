@@ -6,6 +6,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+//UTILS
+import { formatMoney } from '../../../../utils/formatMoney';
+//TYPES
+import { SimulationData } from '../../../../types/simulator';
+
 function createData(
   name: string,
   calories: number,
@@ -24,7 +29,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export function InstallmentTable() {
+interface InstallmentTableProps {
+  installment: SimulationData['parcelamento'];
+}
+
+export function InstallmentTable({ installment }: InstallmentTableProps) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -38,18 +47,18 @@ export function InstallmentTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {installment.map((installment) => (
             <TableRow
-              key={row.name}
+              key={installment.parcelas}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                {installment.parcelas}
               </TableCell>
-              <TableCell>{row.calories}</TableCell>
-              <TableCell>{row.fat}</TableCell>
-              <TableCell>{row.carbs}</TableCell>
-              <TableCell>{row.protein}</TableCell>
+              <TableCell>{installment.taxa_maxima} %</TableCell>
+              <TableCell>{installment.taxa_maxima} %</TableCell>
+              <TableCell>{formatMoney(installment.valor_minimo)}</TableCell>
+              <TableCell>{formatMoney(installment.valor_maximo)}</TableCell>
             </TableRow>
           ))}
         </TableBody>

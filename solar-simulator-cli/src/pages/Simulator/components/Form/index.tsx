@@ -1,13 +1,29 @@
-import { Autocomplete, Button, Grid, Stack, TextField } from '@mui/material';
-import { useSimulatorForm } from './hooks/useSimulatorForm';
-import { InputWithMask } from '../../../../components/inputs';
 import { Controller } from 'react-hook-form';
+import {
+  Autocomplete,
+  Button,
+  Grid,
+  InputAdornment,
+  Stack,
+  TextField,
+} from '@mui/material';
 
-export function Form() {
-  const { options, control, onSubmit, errors } = useSimulatorForm();
+//HOOKS
+import { useSimulatorForm } from './hooks/useSimulatorForm';
+
+//COMPONENTS
+import { InputWithMask } from '../../../../components/inputs';
+
+//TYPES
+import { FormProps } from './types';
+
+export function Form({ onSubmit, isLoading }: FormProps) {
+  const { options, control, onSubmitForm, errors } = useSimulatorForm({
+    onSubmit,
+  });
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmitForm}>
       <Stack direction="column" spacing={2}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
@@ -34,7 +50,12 @@ export function Form() {
                 <TextField
                   {...field}
                   type="number"
-                  label="Valor"
+                  label="Valor da conta de luz"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">R$</InputAdornment>
+                    ),
+                  }}
                   fullWidth
                   error={!!errors?.valor_conta?.message}
                   helperText={errors?.valor_conta?.message}
@@ -70,8 +91,8 @@ export function Form() {
           </Grid>
         </Grid>
         <Stack direction="row" justifyContent="flex-end">
-          <Button variant="contained" type="submit">
-            Enviar
+          <Button variant="contained" type="submit" disabled={isLoading}>
+            {isLoading ? 'Loading...' : 'Enviar'}
           </Button>
         </Stack>
       </Stack>
