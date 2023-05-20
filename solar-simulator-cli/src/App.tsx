@@ -1,8 +1,12 @@
+import { ThemeProvider } from '@mui/material';
+import { Simulator } from './pages/Simulator';
+import { theme } from './styles/themes/default';
+
 function App() {
   return (
-    <>
-      <h1>ola</h1>
-    </>
+    <ThemeProvider theme={theme}>
+      <Simulator />
+    </ThemeProvider>
   );
 }
 

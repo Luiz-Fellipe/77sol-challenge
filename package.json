@@ -9,7 +9,10 @@
     "build": "turbo run build"
   },
   "devDependencies": {
-    "turbo": "^1.9.8",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "turbo": "^1.9.8"
+  },
+  "dependencies": {
+    "react-hook-form": "^7.43.9"
   }
 }
