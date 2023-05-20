@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "docs",
+    "solar-simulator-cli"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.9.8"
+  }
+}
