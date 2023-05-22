@@ -7,7 +7,7 @@ export interface OutlinedCardProps {
 
 export const OutlinedCard = ({ title, value }: OutlinedCardProps) => {
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" data-testid="outlined-card">
       <CardContent>
         <Typography variant="h5" component="div">
           {title}
