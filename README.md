@@ -1,4 +1,4 @@
-# 🚀 77Sol Challenge - Agenda De Contatos
+# 🚀 77Sol Challenge - Simulador Energia Solar
 
 ![Preview do projeto](./images/preview.webp)
 
