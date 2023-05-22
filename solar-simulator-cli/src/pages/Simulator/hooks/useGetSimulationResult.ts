@@ -4,8 +4,8 @@ import { useCallback, useState } from 'react';
 import { getSimulationResult } from '../../../services/endpoints/simulator';
 
 //TYPES
-import { SimulatorForm } from '../components/Form/schema';
 import { SimulationData } from '../../../types/simulator';
+import { SimulatorForm } from '../../../components/forms/SimulationForm/schema';
 
 export function useGetSimulationResult() {
   const [isLoading, setLoading] = useState(false);

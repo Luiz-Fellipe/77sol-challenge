@@ -5,7 +5,10 @@ import { useForm } from 'react-hook-form';
 import { SimulatorForm, schema } from '../schema';
 import { FormProps } from '../types';
 
-export function useSimulatorForm({ onSubmit }: FormProps) {
+export function useSimulatorForm({
+  onSubmit,
+  defaultValues,
+}: Omit<FormProps, 'isLoading'>) {
   const options = [
     {
       label: 'Fibrocimento Madeira',
@@ -39,6 +42,7 @@ export function useSimulatorForm({ onSubmit }: FormProps) {
     formState: { errors },
   } = useForm<SimulatorForm>({
     resolver: zodResolver(schema),
+    defaultValues,
   });
 
   const onSubmitForm = handleSubmit((data) => {

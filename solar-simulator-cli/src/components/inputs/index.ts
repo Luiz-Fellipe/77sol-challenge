@@ -1,3 +1,5 @@
-import { InputWithMask } from './InputWithMask';
+import { InputWithMask, InputWithMaskProps } from './InputWithMask';
 
 export { InputWithMask };
+
+export type { InputWithMaskProps };

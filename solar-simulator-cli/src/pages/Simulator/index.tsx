@@ -10,8 +10,8 @@ import {
 } from '@mui/material';
 
 //COMPONENTS
-import { Form } from './components/Form';
-import { Result } from './components/Result';
+import { SimulationResult } from '../../components/feedbacks';
+import { SimulationForm } from '../../components/forms';
 
 //HOOKS
 import { useGetSimulationResult } from './hooks/useGetSimulationResult';
@@ -31,12 +31,15 @@ export function Simulator() {
             Faça a sua simulação solar
           </Typography>
         </Box>
-        <Form onSubmit={handleGetSimulationResult} isLoading={isLoading} />
+        <SimulationForm
+          onSubmit={handleGetSimulationResult}
+          isLoading={isLoading}
+        />
 
         <Divider variant="middle" />
 
         {!isError && !isLoading && data && (
-          <Result
+          <SimulationResult
             economy={data.economia}
             potential={data.potencial}
             installationPrice={data.valor_instalacao}

@@ -12,14 +12,19 @@ import {
 import { useSimulatorForm } from './hooks/useSimulatorForm';
 
 //COMPONENTS
-import { InputWithMask } from '../../../../components/inputs';
+import { InputWithMask } from '../../inputs';
 
 //TYPES
 import { FormProps } from './types';
 
-export function Form({ onSubmit, isLoading }: FormProps) {
+export function SimulationForm({
+  onSubmit,
+  isLoading,
+  defaultValues,
+}: FormProps) {
   const { options, control, onSubmitForm, errors } = useSimulatorForm({
     onSubmit,
+    defaultValues,
   });
 
   return (

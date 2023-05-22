@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from '@mui/material';
 
-interface OutlinedCardProps {
+export interface OutlinedCardProps {
   title: string;
   value: number | string;
 }

@@ -1,20 +1,21 @@
 import { Grid } from '@mui/material';
-//COMPONENTS
-import { OutlinedCard } from '../../../../components/cards';
-import { InstallmentTable } from '../InstallmentTable';
-//UTILS
-import { formatMoney } from '../../../../utils/formatMoney';
-//TYPES
-import { SimulationData } from '../../../../types/simulator';
 
-interface ResultProps {
+//COMPONENTS
+import { OutlinedCard } from '../../cards';
+import { InstallmentTable } from '../../tables';
+//UTILS
+import { formatMoney } from '../../../utils/formatMoney';
+//TYPES
+import { SimulationData } from '../../../types/simulator';
+
+export interface ResultProps {
   economy: SimulationData['economia'];
   potential: SimulationData['potencial'];
   installationPrice: SimulationData['valor_instalacao'];
   installment: SimulationData['parcelamento'];
 }
 
-export function Result({
+export function SimulationResult({
   economy,
   potential,
   installationPrice,
