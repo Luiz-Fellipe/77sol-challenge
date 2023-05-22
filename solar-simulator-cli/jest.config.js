@@ -1,5 +1,11 @@
 module.exports = {
-  testPathIgnorePatterns: ['/node_modules', '/dist', '/.turbo/'],
+  testPathIgnorePatterns: [
+    '/node_modules',
+    '/dist',
+    '/.turbo/',
+    '/src/tests/',
+    '/src/@types',
+  ],
   setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'],
 
   transform: {
@@ -7,4 +13,16 @@ module.exports = {
   },
 
   testEnvironment: 'jsdom',
+
+  //COVERAGE
+  collectCoverage: true,
+  collectCoverageFrom: ['./src/**'],
+  coveragePathIgnorePatterns: [
+    '/node_modules',
+    '/dist',
+    '/.turbo/',
+    '/src/tests/',
+    '/src/@types',
+    'vite-env.d.ts',
+  ],
 };
