@@ -22,6 +22,9 @@ module.exports = {
     '/.turbo/',
     '/src/tests/',
     '/src/@types',
+    '/src/styles/',
+    '/src/App.tsx',
+    '/src/main.tsx',
     'vite-env.d.ts',
   ],
 };

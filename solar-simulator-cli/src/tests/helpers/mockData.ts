@@ -40,3 +40,12 @@ export const mockSimulationData = {
     },
   ],
 };
+
+export const mockSimulationFormValues = {
+  cep: '74486-470',
+  estrutura: {
+    label: 'Cerâmico',
+    value: 'ceramico',
+  },
+  valor_conta: '400',
+};

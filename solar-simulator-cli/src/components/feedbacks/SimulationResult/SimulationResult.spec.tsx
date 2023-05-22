@@ -1,5 +1,5 @@
 import { render, within } from '@testing-library/react';
-import { SimulationResult } from '.';
+import { SimulationResult } from '../SimulationResult';
 import { mockSimulationData } from '../../../tests/helpers/mockData';
 
 import {

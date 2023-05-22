@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { OutlinedCard } from '.';
+import { OutlinedCard } from '../OutlinedCard';
 import { OUTLINE_CARD_TEST_ID } from '../../../tests/helpers/constants';
 import { mockSimulationData } from '../../../tests/helpers/mockData';
 
