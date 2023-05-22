@@ -26,6 +26,7 @@ module.exports = {
     '/src/App.tsx',
     '/src/main.tsx',
     '/src/services/',
+    '/src/components/index.ts',
     'pages/Simulator/hooks',
     'vite-env.d.ts',
   ],
