@@ -25,6 +25,7 @@ module.exports = {
     '/src/styles/',
     '/src/App.tsx',
     '/src/main.tsx',
+    '/src/services/',
     'vite-env.d.ts',
   ],
 };

@@ -49,3 +49,14 @@ export const mockSimulationFormValues = {
   },
   valor_conta: '400',
 };
+
+export const mockstructureOptions = [
+  {
+    label: 'Laje',
+    value: 'laje',
+  },
+  {
+    label: 'Solo',
+    value: 'solo',
+  },
+];
