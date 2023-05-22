@@ -31,16 +31,25 @@ export function InstallmentTable({ installment }: InstallmentTableProps) {
         <TableBody>
           {installment.map((installment) => (
             <TableRow
+              data-testid="table-row"
               key={installment.parcelas}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell scope="row" data-testid="cell-qtd-installment">
                 {installment.parcelas}
               </TableCell>
-              <TableCell>{installment.taxa_maxima} %</TableCell>
-              <TableCell>{installment.taxa_maxima} %</TableCell>
-              <TableCell>{formatMoney(installment.valor_minimo)}</TableCell>
-              <TableCell>{formatMoney(installment.valor_maximo)}</TableCell>
+              <TableCell data-testid="cell-max-fee">
+                {installment.taxa_maxima} %
+              </TableCell>
+              <TableCell data-testid="cell-min-fee">
+                {installment.taxa_minina} %
+              </TableCell>
+              <TableCell data-testid="cell-min-value">
+                {formatMoney(installment.valor_minimo)}
+              </TableCell>
+              <TableCell data-testid="cell-max-value">
+                {formatMoney(installment.valor_maximo)}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
