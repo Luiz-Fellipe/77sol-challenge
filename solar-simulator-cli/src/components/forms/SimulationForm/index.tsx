@@ -77,6 +77,7 @@ export function SimulationForm({
               render={({ field }) => (
                 <Autocomplete
                   {...field}
+                  data-testid="field-structure-autocomplete"
                   disablePortal
                   fullWidth
                   isOptionEqualToValue={(option, value) => {
