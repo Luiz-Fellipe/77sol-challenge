@@ -2,7 +2,7 @@
 
 ![Preview do projeto](./images/preview.webp)
 
-Este projeto consiste em um simulador solar
+Este projeto é totalmente responsivo e consiste em um simulador solar
 e foi realizado como parte do processo seletivo da empresa [77Sol](https://www.77sol.com.br/).
 
 ## Tecnologias
