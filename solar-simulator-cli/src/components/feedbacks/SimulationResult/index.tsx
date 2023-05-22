@@ -22,7 +22,7 @@ export function SimulationResult({
   installment,
 }: ResultProps) {
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={1} data-testid="simulation-result-container">
       <Grid item xs={12} md={4}>
         <OutlinedCard title="Economia" value={formatMoney(economy)} />
       </Grid>

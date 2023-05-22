@@ -21,7 +21,7 @@ export function Simulator() {
     useGetSimulationResult();
 
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" data-testid="simulator-container">
       <Stack spacing={2}>
         <Box sx={{ width: '100%' }}>
           <Typography variant="h6" gutterBottom>
@@ -56,16 +56,32 @@ export function Simulator() {
         {isLoading && (
           <Grid container spacing={1}>
             <Grid item xs={12} md={4}>
-              <Skeleton variant="rectangular" height={110} />
+              <Skeleton
+                variant="rectangular"
+                data-testid="loading-skeleton"
+                height={110}
+              />
             </Grid>
             <Grid item xs={12} md={4}>
-              <Skeleton variant="rectangular" height={110} />
+              <Skeleton
+                variant="rectangular"
+                data-testid="loading-skeleton"
+                height={110}
+              />
             </Grid>
             <Grid item xs={12} md={4}>
-              <Skeleton variant="rectangular" height={110} />
+              <Skeleton
+                variant="rectangular"
+                data-testid="loading-skeleton"
+                height={110}
+              />
             </Grid>
             <Grid item xs={12}>
-              <Skeleton variant="rectangular" height={210} />
+              <Skeleton
+                variant="rectangular"
+                data-testid="loading-skeleton"
+                height={210}
+              />
             </Grid>
           </Grid>
         )}
