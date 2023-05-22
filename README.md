@@ -85,6 +85,10 @@ Após esses passos, o projeto `docs` deve rodar na sua maquina com sucesso.
 
 Aprendi bastante com esse desafio. Pude melhorar minhas habilidades com a Material-UI, monorepo, manipulação de formulários, conceitos de design system e implementação e cobertura de testes.
 
+### Horas gastas
+
+12 horas de desevolvimento.
+
 ## Autor
 
 - [Luiz-Fellipe](https://github.com/Luiz-Fellipe)
