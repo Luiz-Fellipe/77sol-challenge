@@ -15,7 +15,6 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   //COVERAGE
-  collectCoverage: true,
   collectCoverageFrom: ['./src/**'],
   coveragePathIgnorePatterns: [
     '/node_modules',

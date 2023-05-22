@@ -17,7 +17,7 @@ export interface InstallmentTableProps {
 
 export function InstallmentTable({ installment }: InstallmentTableProps) {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="installment-table">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
